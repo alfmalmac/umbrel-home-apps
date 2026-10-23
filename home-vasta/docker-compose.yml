@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: home-vasta_server_1
+      APP_PORT: "5174"
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: ghcr.io/ariedotme/vasta:0.3.1@sha256:6184c452ec017b37ed3862d85a2e25cca83c94b987fa0c205622111ee67fc3ad
+    user: "1000:1000"
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      VASTA_WEB_URL: "http://${DEVICE_DOMAIN_NAME}:${APP_PROXY_PORT}"
+    volumes:
+      - ${APP_DATA_DIR}/data/vasta:/data

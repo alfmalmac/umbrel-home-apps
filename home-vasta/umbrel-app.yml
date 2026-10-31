@@ -5,7 +5,7 @@ storage:
 name: Vasta
 tagline: Notes, tasks, and days on this Umbrel
 category: files
-version: "0.3.1"
+version: "0.4.1"
 port: 8474
 description: >-
   Local-first notes and tasks. Data stays on this Umbrel.

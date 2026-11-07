@@ -8,7 +8,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/ariedotme/vasta:0.6.2@sha256:3b89f0342899dd1d32aba8fd769ac3aa2965d3c5b34780f2d6505220685a75d5
+    image: ghcr.io/ariedotme/vasta:0.7.1@sha256:92215c1a11f203a93c4938f7d8dc0e81b3c50cca1e4da165cdceb95015ff8ed7
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
